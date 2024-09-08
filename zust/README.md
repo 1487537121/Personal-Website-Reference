@@ -1,2 +1,1 @@
-# genshin-startup
- 原神，启动！
+ZUST，启动！
