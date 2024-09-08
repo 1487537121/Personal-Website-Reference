@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<link rel="icon" href="img/logo.png">
+	<title>浙科·启动</title>
+	<link rel="stylesheet" href="mdui/css/mdui.min.css">
+	<script src="mdui/js/mdui.min.js"></script>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/script.js"></script>
+	<script src="js/startup.js"></script>
+	<script>
+		function redirectToPage() {
+			setTimeout(function() {
+				window.location.href = "https://www.zust.edu.cn/"; // 将链接替换为你要跳转的网页链接
+			}, 16000); 
+			var audio = new Audio("zust.mp3"); // 将音乐文件替换为你要播放的音乐文件路径
+			audio.play();
+		}
+	</script>
+	<style>
+        #fullscreen-button {
+            display: none;
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 0 auto; /* 添加居中布局 */
+			transform:translateX(5px);
+        }
+
+        #fullscreen-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body class="mdui-theme-layout-dark mdui-theme-primary-teal mdui-theme-accent-teal">
+	<div class="main" id="settings">
+		<div id="settings_brand" class="part">
+			<h1>浙科, 启动!</h1>
+			<h1></h1>
+			<h1></h1>
+			<button id="settings_brand_start" class="mdui-btn mdui-color-theme mdui-ripple mdui-ripple-white">
+				<i class="mdui-icon material-icons">play_arrow</i>
+				<span>启动</span>
+			</button>
+			<h1></h1>
+			<button id="fullscreen-button">全屏显示</button>
+            <script src="fullscreen.js"></script>
+		</div>
+		
+			    <div>
+				<select id="settings_time_mode" hidden>
+					<option value="NOW" selected></option>
+				</select>
+			    </div>
+			
+				<div>
+				<select id="settings_time_timer" hidden>
+					<option value="3" selected></option>
+				</select>
+				</div>
+			
+			<div class="item" hidden>
+				
+				<label class="mdui-switch">
+					<input id="settings_time_timerShow" type="checkbox" checked />
+					<i class="mdui-switch-icon"></i>
+				</label>
+			</div>
+			<div class="item" hidden>
+				
+				<input id="settings_time_timestamp" type="datetime-local" />
+			</div>
+		</div>
+		<div id="settings_page" class="part">
+			
+			<div class="item">
+				
+				<label class="mdui-switch">
+					<input id="settings_page_company" type="checkbox" checked />
+					
+				</label>
+			</div>
+			<div class="item">
+				
+				<label class="mdui-switch" style="pointer-events: none;">
+					<input id="settings_page_game" type="checkbox" checked />
+					
+				</label>
+			</div>
+			<div class="item">
+				
+				<label class="mdui-switch">
+					<input id="settings_page_warning" type="checkbox" checked />
+					
+				</label>
+			</div>
+		</div>
+	</div>
+	<div class="main" id="startup" hidden>
+		<div class="time" id="startup_timer" hidden>
+			<div id="startup_timer_tn"></div>
+		</div>
+		<div class="time" id="startup_timestamp" hidden>
+			<h1>启动时刻: <span id="startup_timestamp_t"></span></h1>
+			<p>当前时刻: <span id="startup_timestamp_n"></span></p>
+		</div>
+		<div class="content" id="startup_company">
+			<img src="img/SC/company.jpg" />
+		</div>
+		<div class="content" id="startup_game">
+			<img src="img/SC/game.jpg" />
+			<div id="startup_game_g">
+				抵制不良网站, 拒绝盗版网站, 注意自我保护, 谨防受骗上当, 适度上网益脑, 沉迷上网伤身, 合理安排时间, 享受健康生活。<br>
+				审批文号: 个人出审[2023]1104号 ISBN 221-6-520-07852-13 出版单位: 浙江科技大学个人创作者出版<br>
+				著作权人: 杭州浙江科技学院个人创作者<br>
+				本公司积极履行《网络游戏行业防沉迷自律公约》<br>
+			</div>
+		</div>
+		<div class="content" id="startup_warning">
+			<div id="startup_warning_main">
+				<h1>警告: 上网前详阅</h1>
+				<img src="img/SC/warning_line.jpg" />
+				<p>
+					有极少数的人在观看一些视觉影像时可能会突然癫痫发作, 这些影像包括电子网页中出现的闪光或图形。 在<br>
+					进行浏览网页时, 这些人可能会出现癫痫症状。 甚至连不具有癫痫史的人, 也可能在进行浏览网页时, 出现类<br>
+					似癫痫症状。 如果您或您的家人有癫痫史, 请在进行游戏之前先与医生咨询。 如果您在游玩浏览网页时出现<br>
+					以下症状, 包括眼睛疼痛、 视觉异常、 偏头痛、 痉挛或意识障碍 (诸如昏迷) 等, 请立即中止上网, 并且请您于<br>
+					再次进行本网站之前咨询您的医生。<br><br>
+					除上述症状外, 当您感到头痛、 头晕眼花、 恶心想吐或类似晕车症状时, 以及当身体的某些部位感到不舒服或<br>
+					疼痛时, 请立即中止上网。 若在中止上网后, 症状仍没有减退, 请立即寻求医生的诊疗。<br>
+				</p>
+			</div>
+		</div>
+	</div>
+	<div id="readyStartup" class="mdui-dialog">
+		<div class="mdui-dialog-content">
+			<img src="" />
+			<img src="" />
+			<h2>注意</h2>
+			<h3>启动后会有BGM响起</h3>
+			<h3>注意调节设备音量</h3>
+			<a href="https://701v196c48.goho.co/">作者网站主页</a>
+		</div>
+		<div class="mdui-dialog-actions">
+			<button onclick="redirectToPage()" id="readyStartup_go" class="mdui-btn mdui-ripple mdui-ripple-black" mdui-dialog-close>继续启动</button>
+		</div>
+	</div>
+</body>
+
+</html>
